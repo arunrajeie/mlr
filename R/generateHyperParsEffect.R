@@ -330,7 +330,7 @@ plotHyperParsEffect = function(hyperpars.effect.data, x = NULL, y = NULL,
       averaging = d[, c(hyperpars.effect.data$measures[1]), drop = FALSE]
       combined.hypers = c(hyperpars.effect.data$hyperparams, x, y, z)
       used.hypers = combined.hypers[duplicated(combined.hypers)]
-      hyperpars = lapply(d[, used.hypers], "[")
+      hyperpars = lapply(d[, used.hypers, with = FALSE], "[")
       d = aggregate(averaging, hyperpars, mean)
     }
   } else {

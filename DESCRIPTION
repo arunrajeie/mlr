@@ -54,7 +54,8 @@ Imports:
     parallelMap (>= 1.3),
     survival,
     utils,
-    XML
+    XML,
+    mmpf
 Suggests:
     ada,
     adabag,
